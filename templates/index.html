@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Model Details..</title>
+    <link rel="stylesheet" href="{static 'css/test.css'}">
+</head>
+<body>
+<h1>Employee details.</h1>
+{% if my_details %}
+<table>
+    <thead>
+
+    <th>Emp Name</th>
+    <th>Emp Surname</th>
+    <th>Emp Salary</th>
+    <th>Emp location</th>
+    <th>Emp empid</th>
+    </thead>
+    {% for emp in my_details %}
+    <tr>
+
+        <th>{{emp.name}}</th>
+        <th>{{emp.surname}}</th>
+        <th>{{emp.salary}}</th>
+        <th>{{emp.location}}</th>
+        <th>{{emp.empid}}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>No employees found..</p>
+{% endif %}
+</body>
+</html>

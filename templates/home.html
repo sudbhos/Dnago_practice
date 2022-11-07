@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page details .</title>
+</head>
+<body>
+ <div class="container" align="center">
+     <h1>Information form ..</h1>
+     <form  method="post">
+
+         {{ obj.as_p }}
+         {% csrf_token %}
+         <input type="button" class="btn btn-primary" value="Submit">
+
+
+     </form>
+
+
+ </div>
+</body>
+</html>
